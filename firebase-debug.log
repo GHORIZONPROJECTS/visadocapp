@@ -1,0 +1,25 @@
+[debug] [2024-04-30T12:26:01.680Z] ----------------------------------------------------------------------
+[debug] [2024-04-30T12:26:01.944Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GODWIN\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-04-30T12:26:01.948Z] CLI Version:   13.7.5
+[debug] [2024-04-30T12:26:01.951Z] Platform:      win32
+[debug] [2024-04-30T12:26:01.952Z] Node Version:  v20.7.0
+[debug] [2024-04-30T12:26:01.953Z] Time:          Tue Apr 30 2024 05:26:01 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-04-30T12:26:01.954Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-30T12:26:02.303Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-30T12:26:02.304Z] > authorizing via signed-in user (ghorizongroups@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\GODWIN\Desktop\VisaDoc\VisaDoc App\VisaDoc
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
