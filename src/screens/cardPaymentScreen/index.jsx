@@ -18,6 +18,7 @@ import { AuthContext } from '../../config/AuthContext'
 import Loader from '../../components/loader'
 import { doc, getDoc, setDoc, serverTimestamp, updateDoc  } from "firebase/firestore";
 import { VisaContext } from "../../config/VisaContext";
+import {PAYSTACK_KEY} from "@env"
 
 
 export default function CardPaymentScreen({ navigation }) {
@@ -233,7 +234,7 @@ export default function CardPaymentScreen({ navigation }) {
           {pay && (
             <View style={{ flex: 1 }}>
               <Paystack
-                paystackKey="pk_live_161c76d517eb1046087a90644b3254a012864f6a"
+                paystackKey = {PAYSTACK_KEY}
                 // paystackKey="pk_test_d666de567abe8f9f66fa22c96715dd9e6759a777"
                 amount={visaData.total}
                 billingEmail={user.email}
