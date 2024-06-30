@@ -57,7 +57,7 @@ const ChatScreen = ({ navigation }) => {
 
         <View style={{width:SIZES.width, height:60, backgroundColor:COLORS.main, alignItems:'center', justifyContent:'space-around', flexDirection:'row', marginTop:30}}> 
         <Pressable onPress={() =>navigation.navigate('ProfileScreen')}>
-        <Ionicons name="ios-person-outline" size={24} color="white"  /> 
+        <Ionicons name="ios-person-outline" size={32} color="white"  /> 
         </Pressable>  
         <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center', width: 200}}>
             <Text style={{fontSize:16, color:COLORS.white}}>Chat with Support</Text>
@@ -79,7 +79,7 @@ const ChatScreen = ({ navigation }) => {
                 avatar: auth?.currentUser?.photoURL
             }}
         />
-        <View style={{width:'100%', height:30}}></View>
+        <View style={{width:'100%', height:50, borderTopWidth:2, borderTopColor:'lightgray'}}></View>
 
         </View>
        

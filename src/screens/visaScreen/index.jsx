@@ -138,7 +138,7 @@ async function saveFile(uri, filename, mimetype) {
 
       <View style={{width:SIZES.width, height:60, backgroundColor:COLORS.main, alignItems:'center', justifyContent:'space-around', flexDirection:'row', paddingTop:0}}> 
       <Pressable onPress={() =>navigation.navigate('ProfileScreen')}>
-      <Ionicons name="ios-person-outline" size={24} color="white"  /> 
+      <Ionicons name="ios-person-outline" size={32} color="white"  /> 
       </Pressable>  
      <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center', width: 200}}>
         <Text style={{fontSize:16, color:COLORS.white}}>Approved Document</Text>

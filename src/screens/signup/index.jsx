@@ -79,7 +79,7 @@ const Signup = ({navigation}) => {
   
       if (!confirmPassword) {
           
-          errors.confirmPassword = 'Enter password';
+          errors.confirmPassword = 'Confirm password';
   
       }  else if (confirmPassword.length < 8) {
           
@@ -319,16 +319,16 @@ const handleFacebookSignin = () => {
   
               <TouchableOpacity
                   onPress = {() => {navigation.goBack()}}
-                  style = {{ width : 50, height : 50, alignItems: 'center', justifyContent : 'center', borderTopRightRadius : 20, borderBottomLeftRadius : 20, paddingLeft : 10, backgroundColor : '#348EAE' }}
+                  style = {{ width : 50, height : 50, alignItems: 'center', justifyContent : 'center', borderTopRightRadius : 20, borderBottomLeftRadius : 20, paddingLeft : 10, backgroundColor : '#004AAD' }}
               >
-                  <MaterialIcons name="arrow-back-ios" size={28} color="lightgray" />
+                  <MaterialIcons name="arrow-back-ios" size={28} color="white" />
               </TouchableOpacity>
   
               
               <View style={{ }}>
                   <Image
                       source = {require('../../../assets/images/logo.png')}
-                      alt=''
+                      alt='logo'
                       style={{width : 150, height : 80, marginLeft:50}}
                       resizeMode = 'contain'
   
@@ -338,7 +338,7 @@ const handleFacebookSignin = () => {
             
               <View style = {{width : '100%', height : '200', alignItems : 'center', justifyContent : 'space-between', flexDirection : 'column', marginVertical : 10}}>
                   
-                  <Text style= {{ fontSize : 16, color : 'lightgray'}}>Sign up</Text>
+                  <Text style= {{ fontSize : 24, color : '#004AAD', fontWeight:'bold'}}>Create your account</Text>
               </View>
             
           </View>
@@ -348,96 +348,98 @@ const handleFacebookSignin = () => {
           style = {{width : '100%', height : '90%', backgroundColor : 'white', borderTopRightRadius : 50, borderTopLeftRadius : 50, paddingHorizontal : 40}}>
   
             <View style={{paddingTop : 30}}>
-              <Text style={{fontSize : 14, color : 'gray', marginBottom : 2 }}>Firstname</Text>
+              {/* <Text style={{fontSize : 20, color : 'gray', marginBottom : 2 }}>Firstname</Text> */}
   
               <View style = {{flexDirection : 'row', alignItems : 'center', paddingVertical:12,  paddingHorizontal : 10, backgroundColor : '#f2f2f2', borderRadius : 5, borderWidth : 1, borderColor : '#f2f2f2',}}>
                   <Ionicons name = 'ios-person' size={20} color='gray'/>
                   <TextInput
-                  placeholder = ''
-                  placeholderTextColor = 'lightgray'
+                  placeholder = 'Enter Firstname'
+                  placeholderTextColor = 'gray'
                   value = {firstname}
                   selectionColor="gray"
                   onChangeText = {e => setFirstname(e)}
-                  style={{fontSize : 16, color : 'gray', marginHorizontal : 10, width : 220,}}
+                  style={{fontSize : 20, color : 'black', marginHorizontal : 10, width : 220,}}
               />
   
               </View>
          
                {errors.password && (
-                  <Text style={{fontSize : 14, color : 'red', marginTop : 4}}>
+                  <Text style={{fontSize : 18, color : 'red', marginTop : 4}}>
                       {errors.firstname}
                   </Text>
               )}
           </View>    
-          <View style={{paddingTop : 10}}>
-              <Text style={{fontSize : 14, color : 'gray', marginBottom : 2 }}>Enter Email</Text>
+          <View style={{paddingTop : 20}}>
+              {/* <Text style={{fontSize : 20, color : 'gray', marginBottom : 2 }}>Email</Text> */}
   
               <View style = {{flexDirection : 'row', alignItems : 'center', paddingVertical:12,  paddingHorizontal : 10, backgroundColor : '#f2f2f2', borderRadius : 5, borderWidth : 1, borderColor : '#f2f2f2',}}>
                   <MaterialIcons name="email" size={20} color="gray" />
                   <TextInput
-                  placeholder = ''
+                  placeholder = 'Enter Email'
                   value = {email}
                   selectionColor="gray"
-                  placeholderTextColor = 'lightgray'
+                  placeholderTextColor = 'gray'
                   onChangeText = {e => setEmail(e)}
-                  style={{fontSize : 16, color : 'gray', marginHorizontal : 10, width : 220,}}
+                  style={{fontSize : 20, color : 'black', marginHorizontal : 10, width : 220,}}
               />
   
               </View>
   
               {errors.email && (
-                  <Text style={{fontSize : 14, color : 'red', marginTop : 4}}>
+                  <Text style={{fontSize : 18, color : 'red', marginTop : 4}}>
                       {errors.email}
                   </Text>
               )}
           </View>
         
           
-          <View style={{paddingTop : 10}}>
-              <Text style={{fontSize : 14, color : 'gray', marginBottom : 2 }}>Enter Password</Text>
+          <View style={{paddingTop : 20}}>
+              {/* <Text style={{fontSize : 20, color : 'gray', marginBottom : 2 }}>Password</Text> */}
            
                <View style = {{flexDirection : 'row', alignItems : 'center', paddingVertical:12,  paddingHorizontal : 10, backgroundColor : '#f2f2f2', borderRadius : 5, borderWidth : 1, borderColor : '#f2f2f2', justifyContent :'space-between'}}>
   
               <Ionicons name = 'ios-lock-closed' size={20} color='gray'/>
   
               <TextInput
-                  placeholder = ''
+                  placeholder = 'Enter Password'
                   value = {password}
                   selectionColor="gray"
+                  placeholderTextColor = 'gray'
                   onChangeText = {e => setPassword(e)}
                   secureTextEntry = {hidePassword ? false : true}
-                  style={{ width : 200, fontSize : 16, color : 'gray'}}
+                  style={{ width : 200, fontSize : 20, color : 'black'}}
               />
               <TouchableOpacity onPress = {() => togglePassword()}>
-                  <Ionicons name = {hidePassword ? 'eye-off' : 'eye'} size={20} color={hidePassword ? 'gray' : 'lightgray'} />
+                  <Ionicons name = {hidePassword ? 'eye-off' : 'eye'} size={20} color={hidePassword ? 'gray' : 'gray'} />
               </TouchableOpacity>
               </View>
                {errors.password && (
-                  <Text style={{fontSize : 14, color : 'red', marginTop : 4}}>
+                  <Text style={{fontSize : 18, color : 'red', marginTop : 4}}>
                       {errors.password}
                   </Text>
               )}
           </View>
-          <View style={{paddingTop : 10}}>
-              <Text style={{fontSize : 14, color : 'gray', marginBottom : 2 }}>Confirm Password</Text>
+          <View style={{paddingTop : 20}}>
+              {/* <Text style={{fontSize : 20, color : 'gray', marginBottom : 2 }}>Confirm Password</Text> */}
               <View style = {{flexDirection : 'row', alignItems : 'center', paddingVertical:12,  paddingHorizontal : 10, backgroundColor : '#f2f2f2', borderRadius : 5, borderWidth : 1, borderColor : '#f2f2f2', justifyContent :'space-between'}}>
   
               <Ionicons name = 'ios-lock-closed' size={20} color='gray'/>
   
               <TextInput
-                  placeholder = ''
+                  placeholder = 'Confirm Password'
                   value = {confirmPassword}
                   selectionColor="gray"
+                  placeholderTextColor = 'gray'
                   onChangeText = {e => setConfirmPassword(e)}
                   secureTextEntry = {hideConfirmPassword ? false : true}
-                  style={{ width : 200, fontSize : 16, color : 'gray'}}
+                  style={{ width : 200, fontSize : 20, color : 'black'}}
               />
               <TouchableOpacity onPress = {() => toggleConfirmPassword()}>
-                  <Ionicons name = {hideConfirmPassword ? 'eye-off' : 'eye'} size={20} color={hideConfirmPassword ? 'gray' : 'lightgray'} />
+                  <Ionicons name = {hideConfirmPassword ? 'eye-off' : 'eye'} size={20} color={hideConfirmPassword ? 'gray' : 'gray'} />
               </TouchableOpacity>
               </View>
                {errors.confirmPassword && (
-                  <Text style={{fontSize : 14, color : 'red', marginTop : 4}}>
+                  <Text style={{fontSize : 18, color : 'red', marginTop : 4}}>
                       {errors.confirmPassword}
                   </Text>
               )}
@@ -445,9 +447,9 @@ const handleFacebookSignin = () => {
           
           
   
-          <Pressable onPress = {() => onSignUp()} style ={{ backgroundColor : 'brown', borderRadius : 10, alignItems : 'center', justifyContent : 'center', marginVertical : 20, width : '100%', height : 50, elevation : 4}}>
-              <Text style = {{ fontSize : 16, color : 'white'}}>Sign Up</Text>
-          </Pressable>
+          <TouchableOpacity onPress = {() => onSignUp()} style ={{ backgroundColor : 'brown', borderRadius : 10, alignItems : 'center', justifyContent : 'center', marginVertical : 20, width : '100%', height : 50, elevation : 4}}>
+              <Text style = {{ fontSize : 20, color : 'white', fontWeight:'bold'}}>Sign Up</Text>
+          </TouchableOpacity>
   
           {/* <View style= {{  alignItems : 'center', justifyContent : 'center', width : '100%'}}>
               <Text style= {{ fontSize : 20, fontWeight : 'bold', color : 'gray'}}>or</Text>
@@ -478,9 +480,9 @@ const handleFacebookSignin = () => {
           </View> */}
           
           <View style={{width : '100%', height : 50, alignItems : 'center', justifyContent : 'center', flexDirection : 'row'}}>
-              <Text style={{ fontSize : 14, color : 'gray', marginRight : 7}}>Don't have an account? </Text>
+              <Text style={{ fontSize : 18, color : 'gray', marginRight : 7}}>Don't have an account? </Text>
               <Pressable onPress = {() => {navigation.navigate('LoginScreen')}}>
-                  <Text style={{ fontSize : 14, color : 'brown', }}>Log in </Text>
+                  <Text style={{ fontSize : 20, color : 'brown', fontWeight:'bold'}}>Log in </Text>
               </Pressable>
               
           </View>
@@ -495,7 +497,8 @@ const handleFacebookSignin = () => {
   const styles = StyleSheet.create({
   
       loginContainer : {
-          backgroundColor : '#2596be',
+          paddingTop : 20,
+          backgroundColor : 'lightblue',
           width : '100%',
           height : '100%',
           alignItems : '',

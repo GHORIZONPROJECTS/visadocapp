@@ -82,6 +82,7 @@ const onSubmit= async() => {
     await updateDoc(doc(db, "visa", visaId), {
 
       status : "RECEIVED",
+      constant : "active",
 
     })
 

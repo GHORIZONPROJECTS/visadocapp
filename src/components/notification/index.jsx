@@ -35,7 +35,7 @@ const Notification = ({onPress}) => {
  
     <Pressable onPress={onPress}>
         <View>
-        <Ionicons name="ios-notifications-outline" size={24} color="white" />
+        <Ionicons name="ios-notifications-outline" size={32} color="white" />
         {messageCount
 
         ?

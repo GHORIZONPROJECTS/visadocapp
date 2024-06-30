@@ -94,13 +94,13 @@ export const motherData = [
 // ]
 
 export const tourismCardData = [
-    {id: 1 ,country:'Canada', countryIcon:require('../assets/images/canadalogo.png'), capital:'melb', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'south America', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada.jpg')},
+    {id: 1 ,country:'Ontario', countryIcon:require('../assets/images/canadalogo.png'), capital:'Eagle Beach', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'Canada', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada.jpg')},
 
-    {id: 2 ,country:'Canada', countryIcon:require('../assets/images/canadalogo.png'), capital:'Ontario', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'south America', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada1.jpg')},
+    {id: 2 ,country:'Toronto', countryIcon:require('../assets/images/canadalogo.png'), capital:'Niagara Falls', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'Canada', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada1.jpg')},
 
-    {id: 3 ,country:'Canada', countryIcon:require('../assets/images/canadalogo.png'), capital:'melb', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'south America', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada2.jpg')},
+    {id: 3 ,country:'Newfoundland and Labrador', countryIcon:require('../assets/images/canadalogo.png'), capital:'melb', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'Canada', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada2.jpg')},
 
-    {id: 4 ,country:'Canada', countryIcon:require('../assets/images/canadalogo.png'), capital:'Ontario', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'south America', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada3.jpg')},
+    {id: 4 ,country:'Manitoba', countryIcon:require('../assets/images/canadalogo.png'), capital:'Stanley Park', capitalIcon:require('../assets/images/canadalogo.png'), continent:'south America', continentIcon:require('../assets/images/southamericalogo.png'), region:'Canada', regionIcon:require('../assets/images/canadalogo.png'),   image:require('../assets/images/canada3.jpg')},
 
     
 ]

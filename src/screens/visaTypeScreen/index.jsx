@@ -128,7 +128,7 @@ export default function VisaTypeScreen({ navigation }) {
               {selectedItem === item.value ? <View style={styles.check}>
                 <FontAwesome name="check-circle" size={20} color='darkblue'/>
               </View> : null}
-              <Image source={item.image} alt="" style={styles.itemImage} resizeMode="contain"/>
+              <Image source={item.image} alt="visa type" style={styles.itemImage} resizeMode="contain"/>
               <Text style={{
                 fontSize:13,
                 color: selectedItem == item.value? COLORS.main : 'black',

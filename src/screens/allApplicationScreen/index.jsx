@@ -110,7 +110,7 @@ export default function AllApplicationScreen({navigation}) {
           </View>
           <Text style={{color:'#000000', fontWeight:400, fontSize:16, fontWeight:'bold'}}>Date</Text>
           <Text style={{color:'#000000', fontWeight:400, fontSize:16, fontWeight:'bold'}}>Status</Text>
-          <Text style={{color:'#000000', fontWeight:400, fontSize:16, fontWeight:'bold'}}>View</Text>
+          <Text style={{color:'#000000', fontWeight:400, fontSize:16, fontWeight:'bold'}}>Views</Text>
        </View>
       </View>
 
@@ -130,7 +130,7 @@ export default function AllApplicationScreen({navigation}) {
               <Text style={{color:'#00000088', fontWeight:400, fontSize:14, fontWeight:'bold'}}>{item.date}</Text>
               <Text style={{color:'#00000088', fontWeight:400, fontSize:14, fontWeight:'bold'}}>{item.status}</Text>
               <Pressable onPress={() => navigation.navigate('ViewApplicationScreen', {visaId : item.id})} style={{flexDirection:'row', alignItems:'center', }}>
-              <Text style={{color:'red', fontWeight:400, fontSize:14, fontWeight:'bold' }}>View</Text>
+              <Text style={{color:'red', fontWeight:400, fontSize:14, fontWeight:'bold' }}>view</Text>
               </Pressable>
             </View>
           </View>

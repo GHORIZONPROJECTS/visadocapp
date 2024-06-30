@@ -62,7 +62,7 @@ const visaQuery = () => {
       <View style={{marginVertical:20,  height:120, alignItems:'center', justifyContent:'center', borderRadius:10, flex:1, flexDirection:'row', justifyContent:'space-between'}}>
         <Image
             source= {require('../../../assets/images/payment-method.png')}
-            alt=''
+            alt='payments'
             resizeMode='contain'
             style = {{ width : 100, height : 100, }}
 

@@ -93,11 +93,11 @@ const [isEdit, setIsEdit] = React.useState(false)
         workPosition : userData.workPosition,
         jobDuties : userData.jobDuties,
         previousCompany : userData.previousCompany,
-        // previousComapanyAddress : userData.previousCompanyAddress,
-        // previousCompanyNatureOfJob : userData.previousCompanyNatureOfJob,
-        // dateOfPreviousEmployment : userData.dateOfPreviousEmployment,
-        // previousJobPosition : userData.previousJobPosition,      
-        // previousJobDuties : userData.previousJobDuties,
+        // previousCompanyAddress : userData.previousCompanyAddress,
+        previousCompanyNatureOfJob : userData.previousCompanyNatureOfJob,
+        dateOfPreviousEmployment : userData.dateOfPreviousEmployment,
+        previousJobPosition : userData.previousJobPosition,      
+        previousJobDuties : userData.previousJobDuties,
         timeStamp: serverTimestamp(),
 
       })

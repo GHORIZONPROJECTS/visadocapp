@@ -55,9 +55,9 @@ export default function ProfileScreen({navigation}) {
                
                <Image
                    source= {require('../../../assets/images/user.png')}
-                   alt=''
+                   alt='user'
                    resizeMode='contain'
-                   style = {{ width : 40, height : 40, }}
+                   style = {{ width : 48, height : 48, }}
 
                />
                 <View style={{flexDirection:'column', marginLeft:10}}>

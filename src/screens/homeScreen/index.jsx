@@ -32,7 +32,7 @@ export default function HomeScreen({navigation}) {
 
   const [userVisa, setUserVisa] = useState([])
 
-  const [interview, setInterview] = useState("")
+  const [interview, setInterview] = useState([])
 
   const { user} = useContext(AuthContext)
 
@@ -79,12 +79,12 @@ export default function HomeScreen({navigation}) {
 
       const i = query(collection(db, "visa"), where("userId", "==", user.uid), where("constant", "==", "active"), limit(1));
       onSnapshot(i, (querySnapshot) => {
-      const interviewDate = [];
+      const interviews = [];
       const status = [];
         querySnapshot.forEach((doc) => {
-            interviewDate.push(doc.data().interviewDate.toDate().toDateString());
+            interviews.push(doc.data().interviewDate !== null ? 'Pending' : doc.data().interviewDate.toDate().toDateString());
             status.push(doc.data().status)
-            setInterview(interviewDate)
+            setInterview(interviews)
             setStatusInfo(status)
         });
        
@@ -580,14 +580,6 @@ useEffect(() => {
 
 
 
-  // console.log('visa info:', visaInfo)
-
-  // console.log('INTERVIEW:', interview)
-
-  // console.log('status info: ', statusInfo)
-
-  // console.log('message: ', messageCount)
-
   console.log('approved:', approvedData)
 
   console.log('pending: ', pendingData)
@@ -603,7 +595,7 @@ useEffect(() => {
 
       <View style={{width:SIZES.width, height:60, backgroundColor:COLORS.main, alignItems:'center', justifyContent:'space-around', flexDirection:'row', paddingTop:0}}> 
       <Pressable onPress={() =>navigation.navigate('ProfileScreen')}>
-      <Ionicons name="ios-person-outline" size={24} color="white"  /> 
+      <Ionicons name="ios-person-outline" size={32} color="white"  /> 
       </Pressable> 
       <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center', width: 200}}>
         <Text style={{fontSize:16, color:COLORS.white}}>Welcome</Text><Text style={{color:'white', fontSize:16, marginLeft:5}}> {userData.firstname}</Text> 
@@ -657,7 +649,7 @@ useEffect(() => {
            ?
            <View style={[item.status === "RECEIVED" && styles.receivedOrder, item.status === "PROCESSING" && styles.processingOrder, item.status === "DELIVERING" && styles.deliveringOrder]}>
              <Pressable key = {item.id}  onPress={() => navigation.navigate('VisaStatusScreen', {visaId : item.id})}>
-                     { item.status === "RECEIVED" && <Text style={{color:'white', fontSize:13, fontWeight:'bold', border:1, padding:3}}>RECEIVED </Text>}
+                     { item.status === "RECEIVED" && <Text style={{color:'white', fontSize:13, fontWeight:'bold', padding:3}}>RECEIVED </Text>}
                      { item.status === "PROCESSING" &&  <Text style={{color:'white', fontSize:13, fontWeight:'bold'}}>PROCESSING</Text>}
                      { item.status === "DELIVERING" && <Text style={{color:'white', fontSize:13, fontWeight:'bold'}}>DELIVERING</Text>}
              </Pressable>

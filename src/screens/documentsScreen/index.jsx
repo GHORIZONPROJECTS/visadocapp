@@ -162,7 +162,7 @@ export default function DocumentScreen({navigation}) {
       </div> */}
     <View style={{width:SIZES.width, height:60, backgroundColor:COLORS.main, alignItems:'center', justifyContent:'space-around', flexDirection:'row', paddingTop:0}}> 
       <Pressable onPress={() =>navigation.navigate('ProfileScreen')}>
-      <Ionicons name="ios-person-outline" size={24} color="white"  /> 
+      <Ionicons name="ios-person-outline" size={32} color="white"  /> 
       </Pressable>  
      <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center', width: 200}}>
         <Text style={{fontSize:16, color:COLORS.white}}> Documents</Text>
@@ -197,9 +197,9 @@ export default function DocumentScreen({navigation}) {
             <Text style={{color:'#00000088', fontWeight:400, fontSize:14, fontWeight:'bold'}}>Documents</Text>
           
           </View>
-          <Text style={{color:COLORS.main, fontWeight:400, fontSize:14}}>Status</Text>
+          {/* <Text style={{color:COLORS.main, fontWeight:400, fontSize:14}}>Status</Text> */}
           <Pressable onPress={() => navigation.navigate('Documents')} style={{flexDirection:'row', alignItems:'center', }}>
-          <Text style={{color:COLORS.main, fontWeight:400, fontSize:14, marginRight:3,}}>View</Text>
+          <Text style={{color:COLORS.main, fontWeight:400, fontSize:14, marginRight:3,}}>Views</Text>
           </Pressable>
         </View>
       </View>
@@ -213,7 +213,7 @@ export default function DocumentScreen({navigation}) {
             <View key={item.id} style={{flexDirection:'row', width:'100%', justifyContent:'space-between'}}>
             
             <Text>{item.name}</Text>
-            <Pressable onPress={() => navigation.navigate('ViewDocumentsScreen',{image : item.link, name : item.name})} style={{width:60, height:40, justifyContent:'center', backgroundColor:'#D9E7EE', alignItems:'center', borderRadius:10}}><Text>View</Text></Pressable>
+            <Pressable onPress={() => navigation.navigate('ViewDocumentsScreen',{image : item.link, name : item.name})} style={{width:60, height:40, justifyContent:'center', backgroundColor:'#D9E7EE', alignItems:'center', borderRadius:10}}><Text>view</Text></Pressable>
 
             </View>
 

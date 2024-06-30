@@ -83,7 +83,7 @@ export default function App() {
    const buttonLabel = (label)=>{
     return(
       <View style={{padding:12}}>
-         <Text style={{color:COLORS.title, fontSize:SIZES.h4, fontWeight:'600'}}>{label}</Text>
+         <Text style={{color:COLORS.title, fontSize:20, fontWeight:'600'}}>{label}</Text>
       </View>
     )
     
@@ -103,7 +103,7 @@ export default function App() {
   const startLabel = ()=>{
     return(
       <View style={{width:50, height:50, backgroundColor:COLORS.main, alignItems:'center', justifyContent:'center', borderRadius:25}}>
-            <Ionicons name="ios-arrow-forward-sharp" size={30} color={COLORS.white} />
+            <Ionicons name="ios-arrow-forward-sharp" size={48} color={COLORS.white} />
           
       </View>
     )
@@ -143,10 +143,14 @@ export default function App() {
            )
          }}
          showSkipButton
-         activeDotStyle={{backgroundColor:COLORS.main, width:30}}
+         activeDotStyle={{backgroundColor:COLORS.main, width:38, height:38}}
+         dotStyle={{backgroundColor: 'rgba(0, 0, 0, .2)', height:38, width:38}}
          renderNextButton={()=> buttonLabel("Next")}
          renderSkipButton={()=> buttonLabel("Skip")}
          renderDoneButton={()=> startLabel()}
+         skipLabel = "Skip"
+         nextLabel = "next"
+         doneLabel = "done"
          onDone={async() => onDone(
           await AsyncStorage.setItem('@viewedOnboading', 'true'),
           setViewedOnboarding(true)

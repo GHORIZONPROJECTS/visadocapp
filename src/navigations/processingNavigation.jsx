@@ -163,11 +163,7 @@ const ProcessingNavigation = () => {
 
               {/* {!userData.parent && */}
                 <ProcessingStack.Screen name="ParentScreen" component={ParentScreen} options={{headerShown : false}}/>
-              {/* }   */}
-                {/* <ProcessingStack.Screen name="FathersDeathCertificateImageScreen" component={FathersDeathCertificateImageScreen} options={{headerShown : false}}/>
-                
-                <ProcessingStack.Screen name="MothersDeathCertificateImageScreen" component={MothersDeathCertificateImageScreen} options={{headerShown : false}}/> */}
-              {/* {!userData.education &&   */}
+              
                 <ProcessingStack.Screen name="EducationScreen" component={EducationScreen} options={{headerShown : false}}/>
               {/* } */}
               {/* {!userData.employment && */}

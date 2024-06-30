@@ -17,7 +17,7 @@ const WelcomeScreen = ({navigation}) => {
             <Image 
                 source = {require('../../../assets/images/travel.png')}
                 style = {styles.welcomeImage}
-                alt = ''
+                alt = 'welcome Image'
                 resizeMode = 'contain'
             />
         </View>
@@ -26,9 +26,9 @@ const WelcomeScreen = ({navigation}) => {
             <Text style = {styles.welcomeButtonText}>Log in</Text>
         </Pressable>
         <View style={{flexDirection : 'row', marginVertical : 10, justifyContent : 'flex-end'}}>
-        <Text style={{color : 'white'}}>Already have an account ?</Text>
+        <Text style={{color : '#004AAD', fontSize:18, fontWeight:'bold'}}>Already have an account ?</Text>
         <TouchableOpacity  onPress = {() => {navigation.navigate('Signup')}}>
-            <Text style = {{color : 'black', marginLeft : 8, color : 'brown'}}>Sign Up</Text>
+            <Text style = {{color : 'black', marginLeft : 8, color : 'brown', fontWeight:'bold', fontSize:20}}>Sign Up</Text>
         </TouchableOpacity>
         </View>
         
@@ -42,7 +42,7 @@ export default WelcomeScreen
 const styles = StyleSheet.create({
     welcomeContainer : {
         flex : 1,
-        backgroundColor : '#2596be',
+        backgroundColor : '#BFE1ED',
         width : '100%',
         height : '100%'
 
@@ -59,7 +59,9 @@ const styles = StyleSheet.create({
     welcomeTextHeader : {
         fontWeight : 'bold',
         fontSize : 30,
-        color : 'white'
+        color : 'brown',
+        fontWeight:'bold'
+
     },
 
     welcomeImageBody : {
@@ -82,8 +84,8 @@ const styles = StyleSheet.create({
 
     welcomeButtonText : { 
         color : 'white',
-        fontSize : 16,
-        fontWeight : '400'
+        fontSize : 20,
+        fontWeight : 'bold'
 
     }
 })

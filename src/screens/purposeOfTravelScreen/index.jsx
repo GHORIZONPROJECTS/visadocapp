@@ -142,7 +142,7 @@ export default function PurposeOfTravelScreen({ navigation }) {
                 {selectedItem === item.value ? <View style={styles.check}>
                   <FontAwesome name="check-circle" size={20} color='darkblue'/>
                 </View> : null}
-                <Image source={item.image} alt="" style={styles.itemImage} resizeMode="contain"/>
+                <Image source={item.image} alt="purpose of travel" style={styles.itemImage} resizeMode="contain"/>
                 <Text style={{
                   fontSize:13,
                   color: selectedItem == item.value? COLORS.main :  item.value === 'Study' || item.value === 'Visit' || item.value === 'Work' ? '#00000044' : 'black',
